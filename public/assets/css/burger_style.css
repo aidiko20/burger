@@ -1,6 +1,27 @@
 body{
-    background-image: url(/public/assets/img/cloudy-day.png)
+    background-image: url("/assets/img/cloudy-day.png");
+    font-family: 'Lacquer', sans-serif;
+    color: black;
 }
 .jumbotron {
-    background-image: url(/public/assets/img/krustykrab.png)
+    background-image: url("/assets/img/9834777_2.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 300px;
+}
+#eatburger {
+    padding: 10px;
+}
+#devouredburger {
+    padding: 10px;
+}
+#addburger {
+    padding:10px;
+}
+#container {
+    padding:40px;
+    margin:20px;
+    border:30px;
+    width: 1200px;
 }
