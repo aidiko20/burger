@@ -1,0 +1,43 @@
+<div id="container">
+<div class="jumbotron">
+  <h1 class="display-4">Eat-Da-Burger!</h1>
+  <p class="lead">Let's eat the world's top burgers! *Munch *Munch!</p>
+</div>
+
+<form>
+  <div class="form-group">
+    <label for="formGroupExampleInput">Da-Burger Menu</label>
+  </div>
+
+
+  <div class="card" style="width: 18rem;">
+  <img src="/public/assets/img/giphy.gif" class="card-img-top" alt="...">
+    <h5 class="card-title">Undevaured burgers</h5>
+  <div class="card-body">
+    <ul>
+  {{#each burgers}}
+    {{#unless devoured}}
+      {{> burgers/burger devoured=true}}
+    {{/unless}}
+  {{/each}}
+</ul>
+  <div class="card" style="width: 18rem;">
+  <img src="/public/assets/img/patrick.jpeg" class="card-img-top" alt="...">
+            <h5 class="card-title">Devoured burgers</h5>
+  <div class="card-body">
+    <ul>
+  {{#each burgers}}
+    {{#if devoured}}
+      {{> burgers/burger devoured=false}}
+    {{/if}}
+  {{/each}}
+</ul>
+
+    <form>
+  <div class="form-group">
+    <label for="exampleInputEmail1">Add burger</label>
+    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter burger here">
+    <small id="emailHelp" class="form-text text-muted"></small>
+  </div>
+  <button type="submit" class="btn btn-primary">Submit</button>
+</form>
