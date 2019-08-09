@@ -1,3 +1,6 @@
+body{
+    background-image: url(/public/assets/img/cloudy-day.png)
+}
 .jumbotron {
-    background-image: url("/public/assets/img/krustykrab.png")
+    background-image: url(/public/assets/img/krustykrab.png)
 }
