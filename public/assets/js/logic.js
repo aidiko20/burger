@@ -1,18 +1,19 @@
 $(function(){
     console.log("hello");
-    $(".change-devoured").on("click", function(event){
-        var id = $(this).data("id");
-        var newdevoured = $(this).data("newdevoured");
+    $("#eatbutton").on("click", function(event){
+        var id = $(this).data('id')
+        // var newdevoured = $(this).data("newdevoured");
 
-        // var newDevouredState = {
-        //     devoured: newdevoured
-        // };
-        $.ajax( {
+        console.log(id);
+        var newDevouredState = {
+            devoured: id
+        };
+        $.ajax("/api/burgers/" + id, {
             type: "PUT",
-            url: "/burgers/" + id
+            data: newDevouredState
         }).then(
             function() {
-                console.log("You devoured ", newdevoured);
+                // console.log("You devoured ", newdevoured);
                 location.reload();
             }
         );
