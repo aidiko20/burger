@@ -1,6 +1,7 @@
 $(function () {
     console.log("hello");
-    $("#eatbutton").on("click", function (event) {
+    $(".eatbutton").on("click", function (event) {
+        event.preventDefault();
         var id = $(this).data('id')
         // var newdevoured = $(this).data("newdevoured");
 
@@ -35,7 +36,8 @@ $(function () {
         });
     });
 
-    $(".trashbutton").on("click", function (event) {
+    $(".trashburger").on("click", function (event) {
+        event.preventDefault();
         var id = $(this).data("id");
 
         $.ajax("/api/burgers/" + id, {

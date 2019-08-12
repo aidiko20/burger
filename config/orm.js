@@ -60,7 +60,7 @@ var orm = {
         queryString += condition;
         connection.query(queryString, function(err, result) {
             if (err) throw err;
-            cd (result);
+            cb(result);
         });
     }
 };
