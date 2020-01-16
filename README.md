@@ -1,5 +1,5 @@
 # burger
-## Welcome to fron-end and back end website.
+## Welcome to front-end and back end website.
 Purpose of this assigment is to run and connect both back end and front end using handlebars.
 live website (https://nameless-sierra-39712.herokuapp.com/)
 #How to use Burger app
